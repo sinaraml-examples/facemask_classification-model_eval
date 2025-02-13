@@ -1,0 +1,25 @@
+{
+    "pipeline_params":
+    {
+        "env_name":"user",
+        "pipeline_name":"facemask_classification_rest",
+        "zone_name":"test"
+    },
+    "step_params": {},
+    "substeps_params":
+    [
+        {
+            "substep_name":"run_classification.ipynb",
+            "substep_params":
+            {                
+            }
+        },
+        {
+            "substep_name":"eval_classificaton.ipynb",
+            "substep_params":
+            {
+                "threshold_accuracy" : 0.5
+            }
+        }
+    ]
+}
